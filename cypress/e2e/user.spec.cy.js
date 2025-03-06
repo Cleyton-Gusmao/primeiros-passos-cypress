@@ -13,10 +13,11 @@ describe('Orange HRM Tests', () => {
     midlleNameField: "[name='middleName']",
     lastNameField: "[name='lastName']",
     genericFild: ".oxd-input--active",
-    dateFild: "[placeholder='yyyy-dd-mm']"
+    dateFild: "[placeholder='yyyy-dd-mm']",
+    dateCloseButton: ".--close"
   }
 
-  it.skip('Login - Fail', () => {
+  it('Login - Fail', () => {
     cy.visit('/auth/login')
     cy.get(selectorList.usernameField).type(userData.userFail.username)
     cy.get(selectorList.passwordField).type(userData.userFail.password)
@@ -41,7 +42,8 @@ describe('Orange HRM Tests', () => {
     cy.get(selectorList.genericFild).eq(3).clear().type("ACC1051")
     cy.get(selectorList.genericFild).eq(4).clear().type("Other Id")
     cy.get(selectorList.genericFild).eq(5).clear().type("Driver's License Number")
-    cy.get(selectorList.dateFild).clear().type("2000-21-01")
+    cy.get(selectorList.dateFild).eq(0).clear().type("2000-04-04")
+    cy.get(selectorList.dateCloseButton).click()
   })
 
 })
