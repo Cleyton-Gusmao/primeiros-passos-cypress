@@ -7,8 +7,8 @@
     "userSuccess": {
         "username": "Admin",
         "password": "admin123",
-        "firstName": "Cleyton",
-        "midlleName": "Carlos",
-        "lastName": "Gusmão"
+        "firstName": "FirstName",
+        "midlleName": "MidlleName",
+        "lastName": "LastName"
     }
 }
