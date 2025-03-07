@@ -10,5 +10,14 @@
         "firstName": "FirstName",
         "midlleName": "MidlleName",
         "lastName": "LastName"
+    },
+
+    "userInfos": {
+        "employeeId": "ACC1051",
+        "otherId": "Other Id",
+        "driverLicenseNumber": "Driver's License Number",
+        "dateLicense": "2026-04-04",
+        "dateOfBirth": "2000-04-04",
+        "testeField": "Test_Field"
     }
 }
