@@ -8,7 +8,7 @@ class DashboardPage {
         return selectors
     }
 
-    checkPage(){
+    checkDashboardPage(){
         cy.get(this.selectorList().dashboardGrid)
         cy.location('pathname').should('equal', '/web/index.php/dashboard/index')
     }

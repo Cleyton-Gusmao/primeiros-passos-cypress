@@ -26,10 +26,6 @@ class MyInfoPage {
         cy.location('pathname').should('equal', '/web/index.php/pim/viewPersonalDetails/empNumber/7')
     }
 
-    checkSave(){
-        cy.get(this.selectorsList().body).should('contain', 'Successfully Updated')
-    }
-
     nameFields(firstName, midlleName, lastName) {
         cy.get(this.selectorsList().firstNameField).clear().type(firstName)
         cy.get(this.selectorsList().midlleNameField).clear().type(midlleName)
@@ -60,6 +56,10 @@ class MyInfoPage {
         cy.get(this.selectorsList().bloodTypeSelector).click()
         cy.get(this.selectorsList().genericFild).eq(9).clear().type(testeField)
         cy.get(this.selectorsList().saveButton).eq(1).click()
+    }
+
+    checkSave(){
+        cy.get(this.selectorsList().body).should('contain', 'Successfully Updated')
     }
 }
 
