@@ -2,7 +2,7 @@ class LoginPage {
 
     selectorsList() {
         const selectors = {
-            usernameField: "[name='username']",
+            usernameField: "[placeholder='Username']",
             passwordField: "[name='password']",
             loginButton: "[type='submit']",
             wrongCredentialAlert: ".oxd-alert"
@@ -13,6 +13,7 @@ class LoginPage {
 
     accessLoginPage() {
         cy.visit('/auth/login')
+        cy.url().should('include', '/auth/login')
     }
     
     loginWithUser(username, password) {
